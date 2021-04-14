@@ -192,6 +192,7 @@ public class WechatWorkIdentityProvider extends AbstractOAuth2IdentityProvider<W
         return identity;
     }
 
+    @Override
     public BrokeredIdentityContext getFederatedIdentity(String authorizationCode) {
         String accessToken = get_access_token();
         if (accessToken == null) {

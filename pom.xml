@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.keycloak</groupId>
 		<artifactId>keycloak-parent</artifactId>
-		<version>9.0.2</version>
+		<version>12.0.4</version>
 	</parent>
     <modelVersion>4.0.0</modelVersion>
 <!--	<groupId>org.keycloak</groupId>-->
@@ -15,7 +15,7 @@
 	<properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <keycloak.version>9.0.2</keycloak.version>
+        <keycloak.version>12.0.4</keycloak.version>
 		<infinispan.version>9.4.8.Final</infinispan.version>
     </properties>
 
@@ -62,13 +62,14 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-    
+
+	<!-- 注意配置maven仓库 用https访问，不然有jar包无法下载好像-->
     <repositories>
 		<repository>
 			<!-- Maven 自带的中央仓库使用的Id为central 如果其他的仓库声明也是用该Id 就会覆盖中央仓库的配置 --> 
 			<id>central</id>
 			<name>mvnrepository</name>
-			<url>http://www.mvnrepository.com/</url>
+			<url>https://www.mvnrepository.com/</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>
